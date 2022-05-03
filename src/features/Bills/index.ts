@@ -1,1 +1,1 @@
-export * from './screens/Bills'
+export * from './screens/index'
