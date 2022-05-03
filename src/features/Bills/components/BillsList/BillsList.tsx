@@ -14,7 +14,7 @@ const BillsList = () => {
 
   return (
     <View>
-      <FlatList data={bills} renderItem={renderItem} />
+      <FlatList data={bills} renderItem={renderItem} numColumns={2} />
     </View>
   );
 };

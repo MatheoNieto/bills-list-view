@@ -9,6 +9,9 @@ import i18next from 'i18next';
 import English from './i18n/translations/en.json';
 import Spanish from './i18n/translations/es.json';
 
+import {QueryClientProvider} from 'react-query';
+import {queryClient} from './shared/queryClient';
+
 i18next.init({
   interpolation: {escapeValue: false},
   lng: 'en',
@@ -30,11 +33,13 @@ i18next.init({
 export const Application = ({theme}: {theme?: Theme}) => {
   return (
     <ThemeProvider theme={theme}>
-      <I18nextProvider i18n={i18next}>
-        <SafeAreaView style={styles.safeAreaView}>
-          <Bills />
-        </SafeAreaView>
-      </I18nextProvider>
+      <QueryClientProvider client={queryClient}>
+        <I18nextProvider i18n={i18next}>
+          <SafeAreaView style={styles.safeAreaView}>
+            <Bills />
+          </SafeAreaView>
+        </I18nextProvider>
+      </QueryClientProvider>
     </ThemeProvider>
   );
 };

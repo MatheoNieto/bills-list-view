@@ -6,8 +6,9 @@ export type BillType = {
 };
 
 export enum BillStatus {
-  PENDING = 'Pending',
-  COMPLETED = 'Completed',
-  CANCELED = 'CANCELED',
+  PROCESSING = 'processing',
+  SCHEDULED = 'scheduled',
+  UNABLE_PAY = 'unable to pay',
+  PAID = 'paid',
 }
 
