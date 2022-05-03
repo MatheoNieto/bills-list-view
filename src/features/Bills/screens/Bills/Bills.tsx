@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import {useTheme} from '../../../../contexts/Theme';
 import {makeStyles} from './Bills.styles';
 import {useTranslation} from 'react-i18next';
+import {BillsList} from '../../components/BillsList'
 
 const Bills: FC = () => {
   const {theme} = useTheme();
@@ -11,7 +12,10 @@ const Bills: FC = () => {
 
   return (
     <View style={styles.container}>
-      <Text>{t('common.bills')}</Text>
+      <View style={styles.head}>
+      <Text style={styles.title}>{t('common.bills')}</Text>
+      </View>
+      <BillsList/>
     </View>
   );
 };

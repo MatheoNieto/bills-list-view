@@ -1,4 +1,4 @@
-import { BillType, BillStatus } from "src/models";
+import { BillType, BillStatus } from "../../../models";
 
 export const bills: BillType[] = [
   {

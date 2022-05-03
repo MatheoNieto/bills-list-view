@@ -3,7 +3,7 @@ import {View, FlatList} from 'react-native';
 
 import {bills} from '../../mock/listBills';
 import {BillCard} from '../BillCard';
-import {BillType} from 'src/models';
+import {BillType} from '../../../../models';
 
 type renderItemType = {item: BillType; index: number};
 
