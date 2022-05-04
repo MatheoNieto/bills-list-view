@@ -1,20 +1,25 @@
 import React from 'react';
 import {View, FlatList} from 'react-native';
 
-import {bills} from '../../mock/listBills';
 import {BillCard} from '../BillCard';
-import {BillType} from '../../../../models';
-
-type renderItemType = {item: BillType; index: number};
+import {renderItemType} from '../../../../models';
+import {Spinner} from '../../../../components';
+import {useGetBills} from '../../../../hooks/bills';
 
 const BillsList = () => {
+  const {data} = useGetBills();
+
   const renderItem = ({item, index}: renderItemType) => (
     <BillCard key={`${item.id}${index}`} bill={item} />
   );
 
+  if (data === undefined) {
+    return <Spinner />
+  }
+
   return (
     <View>
-      <FlatList data={bills} renderItem={renderItem} numColumns={2} />
+      <FlatList data={data.bills} renderItem={renderItem} numColumns={2} />
     </View>
   );
 };

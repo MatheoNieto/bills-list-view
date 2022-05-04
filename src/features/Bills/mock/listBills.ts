@@ -1,16 +1,20 @@
-import { BillType, BillStatus } from "../../../models";
+import {BillType, BillStatus} from '../../../models';
 
 export const bills: BillType[] = [
   {
-  id: 0,
-  company: 'test company',
-  amount: 1000,
-  status: BillStatus.PAID
-},
+    id: 0,
+    amount: 1000,
+    status: BillStatus.PAID,
+    date: '20-03-2022',
+    destiny: 'test',
+    image: '',
+  },
   {
-  id: 1,
-  company: 'test company 2 ',
-  amount: 1200,
-  status: BillStatus.PROCESSING
-}
-]
+    id: 1,
+    amount: 1000,
+    status: BillStatus.PAID,
+    date: '20-03-2022',
+    destiny: 'test',
+    image: '',
+  },
+];

@@ -7,6 +7,8 @@ export const makeStyles = ({spacing, color}: ThemeKeys) =>
       padding: spacing[3],
       marginVertical: spacing[2],
       borderBottomColor: color.primary.grey,
-      borderBottomWidth: 1
+      borderBottomWidth: 1,
+      flex: 1,
+      margin: spacing[2]
     },
   });

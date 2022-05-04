@@ -1,8 +1,10 @@
 export type BillType = {
   id: number;
-  company: string;
+  image: string;
+  destiny: string;
   amount: number;
   status: BillStatus;
+  date: string | Date;
 };
 
 export enum BillStatus {
@@ -12,3 +14,4 @@ export enum BillStatus {
   PAID = 'paid',
 }
 
+export type renderItemType = {item: BillType; index: number};

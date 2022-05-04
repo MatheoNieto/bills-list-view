@@ -1,5 +1,4 @@
 import {AlertService} from './alert';
-
 export class HttpCommonService {
   private alertService: AlertService;
 
