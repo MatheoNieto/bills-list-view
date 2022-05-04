@@ -1,1 +1,1 @@
-export {default as Bills } from './Bills/Bills'
+export {default as BillsScreen } from './Bills/Bills'

@@ -5,7 +5,7 @@ import {makeStyles} from './Bills.styles';
 import {useTranslation} from 'react-i18next';
 import {BillsList} from '../../components/BillsList'
 
-const Bills: FC = () => {
+const BillsScreen: FC = () => {
   const {theme} = useTheme();
   const styles = makeStyles(theme);
   const {t} = useTranslation();
@@ -20,4 +20,4 @@ const Bills: FC = () => {
   );
 };
 
-export default Bills;
+export default BillsScreen;
