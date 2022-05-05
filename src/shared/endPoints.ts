@@ -1,5 +1,5 @@
-const baseURL = 'http://localhost:3001'
+const baseURL = 'http://localhost:3001';
 
 export const EndPoints = {
-  bills: `${baseURL}/bills`
-}
+  bills: `${baseURL}/bills`,
+};

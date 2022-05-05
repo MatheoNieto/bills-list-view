@@ -13,6 +13,5 @@ export type PopUpType = {
   open: boolean;
 };
 
-
 export const OPEN_DRAWER_DURATION = 300;
 export const CLOSE_DRAWER_DURATION = 300;

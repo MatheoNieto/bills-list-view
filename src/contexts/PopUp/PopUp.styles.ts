@@ -14,7 +14,7 @@ export const makeStyles = (
     card: {
       minHeight: 300,
       minWidth: 300,
-      maxHeight:890,
+      maxHeight: 890,
       backgroundColor: color.white,
       borderTopLeftRadius: 24,
       borderTopRightRadius: 24,

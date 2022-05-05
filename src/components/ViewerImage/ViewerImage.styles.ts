@@ -1,7 +1,7 @@
 import {StyleSheet} from 'react-native';
-import {ThemeKeys} from 'src/contexts/Theme';
+import {ThemeKeys} from '@contexts/Theme';
 
-export const makeStyles = ({spacing, color, fontWeight}: ThemeKeys) =>
+export const makeStyles = ({spacing, color}: ThemeKeys) =>
   StyleSheet.create({
     container: {
       padding: spacing[3],

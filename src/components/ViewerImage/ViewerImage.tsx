@@ -6,7 +6,6 @@ import {useTheme} from '../../contexts/Theme';
 import {makeStyles} from './ViewerImage.styles';
 import {useTranslation} from 'react-i18next';
 
-
 const ViewerImage: FC<ViewerImageProps> = ({visible, image, onClose}) => {
   const {theme} = useTheme();
   const styles = makeStyles(theme);
@@ -19,13 +18,13 @@ const ViewerImage: FC<ViewerImageProps> = ({visible, image, onClose}) => {
           <Text>{t('common.close')}</Text>
         </Pressable>
       </View>
-        <ImageViewer
-          imageUrls={[
-            {
-              url: image,
-            },
-          ]}
-        />
+      <ImageViewer
+        imageUrls={[
+          {
+            url: image,
+          },
+        ]}
+      />
     </Modal>
   );
 };

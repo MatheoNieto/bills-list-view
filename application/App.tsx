@@ -1,6 +1,6 @@
-import React, {FC} from 'react';
+import React from 'react';
 import {Application} from '../src/index';
 
-const App: FC = () => <Application />;
+const App = () => <Application />;
 
 export default App;

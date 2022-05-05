@@ -1,1 +1,1 @@
-export {default as ViewerImage} from './ViewerImage'
+export {default as ViewerImage} from './ViewerImage';
