@@ -1,7 +1,8 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet} from 'react-native';
-import {ThemeProvider, Theme} from './contexts/Theme';
-import {Bills} from './features/Bills';
+import {ThemeProvider, Theme} from '@contexts/Theme';
+import {PopUpProvider} from '@contexts/PopUp';
+import {Bills} from '@features/Bills';
 
 import {I18nextProvider} from 'react-i18next';
 import i18next from 'i18next';
@@ -10,7 +11,7 @@ import English from './i18n/translations/en.json';
 import Spanish from './i18n/translations/es.json';
 
 import {QueryClientProvider} from 'react-query';
-import {queryClient} from './shared/queryClient';
+import {queryClient} from '@shared/queryClient';
 
 i18next.init({
   interpolation: {escapeValue: false},
@@ -33,13 +34,15 @@ i18next.init({
 export const Application = ({theme}: {theme?: Theme}) => {
   return (
     <ThemeProvider theme={theme}>
-      <QueryClientProvider client={queryClient}>
-        <I18nextProvider i18n={i18next}>
-          <SafeAreaView style={styles.safeAreaView}>
-            <Bills />
-          </SafeAreaView>
-        </I18nextProvider>
-      </QueryClientProvider>
+      <PopUpProvider>
+        <QueryClientProvider client={queryClient}>
+          <I18nextProvider i18n={i18next}>
+            <SafeAreaView style={styles.safeAreaView}>
+              <Bills />
+            </SafeAreaView>
+          </I18nextProvider>
+        </QueryClientProvider>
+      </PopUpProvider>
     </ThemeProvider>
   );
 };

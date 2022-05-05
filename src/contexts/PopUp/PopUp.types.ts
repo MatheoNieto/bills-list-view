@@ -1,14 +1,14 @@
 import {ViewStyle} from 'react-native';
 import {ReactNode} from 'react';
 
-export type ModalStylesType = {
+export type PopUpStyleTypes = {
   cover?: ViewStyle;
   card?: ViewStyle;
   sheet?: ViewStyle;
 };
 
-export type TModalContext = {
-  handleOpen: (options: ReactNode, styles?: ModalStylesType) => void;
+export type PopUpType = {
+  handleOpen: (options: ReactNode, styles?: PopUpStyleTypes) => void;
   handleClose: () => void;
   open: boolean;
 };

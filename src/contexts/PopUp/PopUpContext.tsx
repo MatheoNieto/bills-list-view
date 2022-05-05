@@ -8,21 +8,21 @@ import {
 } from 'react-native';
 
 import {useTheme} from '../Theme';
-import {TModalContext, ModalStylesType} from './PopUp.types';
+import {PopUpType, PopUpStyleTypes} from './PopUp.types';
 import {makeStyles} from './PopUp.styles';
 
 const OPEN_DRAWER_DURATION = 300;
 const CLOSE_DRAWER_DURATION = 300;
 
-export const ModalContext = createContext<TModalContext | undefined>(undefined);
+export const PopUpContext = createContext<PopUpType | undefined>(undefined);
 
 const deviceHeight = Dimensions.get('window').height;
 
-export const ModalProvider: FC = ({children}) => {
+export const PopUpProvider: FC = ({children}) => {
   const [animation] = useState(new Animated.Value(0));
   const [options, setOptions] = useState<ReactNode>([]);
   const [open, setOpen] = useState<boolean>(false);
-  const [extensibleStyles, setExtendibleStyles] = useState<ModalStylesType>({});
+  const [extensibleStyles, setExtendibleStyles] = useState<PopUpStyleTypes>({});
 
   const {theme} = useTheme();
 
@@ -57,7 +57,7 @@ export const ModalProvider: FC = ({children}) => {
     ],
   };
 
-  const handleOpen = (o: ReactNode, customStyles?: ModalStylesType) => {
+  const handleOpen = (o: ReactNode, customStyles?: PopUpStyleTypes) => {
     customStyles && setExtendibleStyles(customStyles);
     setOptions(o);
     Animated.timing(animation, {
@@ -86,7 +86,7 @@ export const ModalProvider: FC = ({children}) => {
   };
 
   return (
-    <ModalContext.Provider value={{handleOpen, handleClose, open}}>
+    <PopUpContext.Provider value={{handleOpen, handleClose, open}}>
       {children}
       <Animated.View style={[StyleSheet.absoluteFill, styles.cover, backdrop]}>
         <TouchableOpacity
@@ -99,6 +99,6 @@ export const ModalProvider: FC = ({children}) => {
       <View style={[styles.sheet]}>
         <Animated.View style={[styles.card, slideUp]}>{options}</Animated.View>
       </View>
-    </ModalContext.Provider>
+    </PopUpContext.Provider>
   );
 };
