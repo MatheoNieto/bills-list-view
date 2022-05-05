@@ -1,10 +1,10 @@
 import {ThemeKeys} from '@contexts/Theme';
 import {StyleSheet, Dimensions} from 'react-native';
-import {ModalStylesType} from './PopUp.types';
+import {PopUpStyleTypes} from './PopUp.types';
 
 export const makeStyles = (
   {color}: ThemeKeys,
-  {card, cover, sheet}: ModalStylesType,
+  {card, cover, sheet}: PopUpStyleTypes,
 ) =>
   StyleSheet.create({
     cover: {
@@ -14,7 +14,7 @@ export const makeStyles = (
     card: {
       minHeight: 300,
       minWidth: 300,
-      maxHeight: 690,
+      maxHeight:890,
       backgroundColor: color.white,
       borderTopLeftRadius: 24,
       borderTopRightRadius: 24,

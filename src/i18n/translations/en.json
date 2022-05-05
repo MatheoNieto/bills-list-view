@@ -6,5 +6,7 @@
   "bills.date": "Date",
   "bills.destiny": "Pay to",
   "bills.status": "Status",
-  "bills.amount": "Amount"
+  "bills.amount": "Amount",
+  "bills.processing": "This bill is currently in processing, it can take approx. 1-2 hours  depending on the time of day",
+  "bills.scheduled": "This bill is scheduled to be paid and will be paid on the due date, you're  in good hands!, etc.) "
 }

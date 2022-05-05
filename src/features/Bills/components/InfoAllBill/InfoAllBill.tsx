@@ -1,10 +1,10 @@
 import React, {FC} from 'react';
-import { Text, ScrollView} from 'react-native';
-import {InfoAllBillProps} from './InfoAllBill.types';
+import {Text, View} from 'react-native';
+import {InfoAllBillProps, infoStatus} from './InfoAllBill.types';
 import {useTranslation} from 'react-i18next';
 import {useTheme} from '@contexts/Theme';
 import {makeStyles} from './InfoAllBill.styles';
-import {BillType} from '@models/Bill';
+import {BillType, BillStatus} from '@models/Bill';
 import {Image} from '@components/Image';
 
 const InfoAllBill: FC<InfoAllBillProps> = ({bill}) => {
@@ -28,8 +28,12 @@ const InfoAllBill: FC<InfoAllBillProps> = ({bill}) => {
     });
   };
 
-  return <ScrollView 
-  contentContainerStyle={styles.infoBill}>{renderData()}</ScrollView>;
+  return (
+    <>
+      <View style={styles.infoBill}>{renderData()}</View>
+      <Text>{t(`${infoStatus[bill.status as BillStatus]}`)}</Text>
+    </>
+  );
 };
 
 export default InfoAllBill;

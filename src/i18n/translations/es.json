@@ -6,5 +6,7 @@
   "bills.date": "Fecha",
   "bills.destiny": "Pagar a",
   "bills.status": "Estado",
-  "bills.amount": "Valor"
+  "bills.amount": "Valor",
+  "bills.processing":"Esta factura está actualmente en proceso, puede tardar aprox. 1-2 horas dependiendo de la hora del día",
+  "bills.scheduled":"Esta factura está programada para ser pagada y se pagará en la fecha de vencimiento, ¡estás en buenas manos!, etc.)"
 }
