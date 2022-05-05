@@ -33,7 +33,11 @@ const BillCard: FC<BillCardProps> = ({bill}) => {
         </Pressable>
       </View>
 
-      <ViewerImage visible={showViewerImage} image={bill.image} />
+      <ViewerImage
+        visible={showViewerImage}
+        image={bill.image}
+        onClose={() => setShowViewerImage(false)}
+      />
     </View>
   );
 };

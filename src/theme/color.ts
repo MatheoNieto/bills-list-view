@@ -5,5 +5,6 @@ export const color = {
     main: palette.Orange,
     grey: palette.Grey,
     orangeLight: palette.OrangeLight,
-  }
+  },
+  white: palette.White,
 }
