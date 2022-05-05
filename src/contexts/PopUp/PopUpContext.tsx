@@ -8,11 +8,14 @@ import {
 } from 'react-native';
 
 import {useTheme} from '../Theme';
-import {PopUpType, PopUpStyleTypes} from './PopUp.types';
-import {makeStyles} from './PopUp.styles';
+import {
+  PopUpType,
+  PopUpStyleTypes,
+  OPEN_DRAWER_DURATION,
+  CLOSE_DRAWER_DURATION,
+} from './PopUp.types';
 
-const OPEN_DRAWER_DURATION = 300;
-const CLOSE_DRAWER_DURATION = 300;
+import {makeStyles} from './PopUp.styles';
 
 export const PopUpContext = createContext<PopUpType | undefined>(undefined);
 

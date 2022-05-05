@@ -5,15 +5,24 @@ import {useTheme} from '@contexts/Theme';
 import {makeStyles} from './BillCard.styles';
 import {ViewerImage} from '@components/ViewerImage';
 import {useTranslation} from 'react-i18next';
+import {usePopUp} from '@contexts/PopUp/hook/usePopUp';
+import {InfoAllBill} from '../InfoAllBill';
 
 const BillCard: FC<BillCardProps> = ({bill}) => {
   const [showViewerImage, setShowViewerImage] = useState<boolean>(false);
   const {theme} = useTheme();
   const styles = makeStyles(theme);
   const {t} = useTranslation();
+  const {openPopUp, closePopUp} = usePopUp();
 
+  const handleShowViewerImage = () => {
+    setShowViewerImage(true);
+    closePopUp();
+  };
 
-  const handleShowViewerImage = () => setShowViewerImage(true);
+  const renderInfoBill = () => {
+    return <InfoAllBill bill={bill} />;
+  };
 
   return (
     <View style={styles.container}>
@@ -36,7 +45,9 @@ const BillCard: FC<BillCardProps> = ({bill}) => {
           <Text>{bill.status}</Text>
         </Text>
 
-        <Pressable style={styles.seeMore} onPress={() => null}>
+        <Pressable
+          style={styles.seeMore}
+          onPress={() => openPopUp(renderInfoBill)}>
           <Text style={styles.seeMoreLabel}>{t('common.seeMore')}</Text>
         </Pressable>
       </View>
