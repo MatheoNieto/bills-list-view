@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {View, FlatList} from 'react-native';
 
 import {BillCard} from '../BillCard';
@@ -13,9 +13,13 @@ const BillsList = () => {
   const [loadBills, setLoadBills] = useState<number>(6);
   const {theme} = useTheme();
   const styles = makeStyles(theme);
-  const {isLoading, data:bills} = useGetBills(loadBills);
+  const {isLoading, data: bills, refetch} = useGetBills(loadBills);
 
   console.log('=>data', bills);
+
+  useEffect(() => {
+    refetch();
+  }, [loadBills, refetch]);
 
   const renderItem = ({item}: renderItemType) => <BillCard bill={item} />;
 
@@ -24,7 +28,7 @@ const BillsList = () => {
   }
 
   const handleLoadMore = () => {
-    console.log("=>load more")
+    console.log('=>load more');
     const cantGet = loadBills + loadBills;
     setLoadBills(cantGet);
   };
