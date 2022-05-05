@@ -15,8 +15,6 @@ const BillsList = () => {
   const styles = makeStyles(theme);
   const {isLoading, data: bills, refetch} = useGetBills(loadBills);
 
-  console.log('=>data', bills);
-
   useEffect(() => {
     refetch();
   }, [loadBills, refetch]);
@@ -28,7 +26,6 @@ const BillsList = () => {
   }
 
   const handleLoadMore = () => {
-    console.log('=>load more');
     const cantGet = loadBills + loadBills;
     setLoadBills(cantGet);
   };

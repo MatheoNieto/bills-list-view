@@ -23,7 +23,6 @@ class GeneralRequestService {
       });
       return response.data;
     } catch (err) {
-      console.log("=>err",err.response)
       this.httpCommonService.handleError(err);
     }
   }
