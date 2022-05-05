@@ -1,8 +1,10 @@
 {
-  "common.bills":"Bills",
-  "common.datePaid": "Date",
-  "common.payTo": "Pay to",
-  "common.statusPaid": "Status",
   "common.seeMore": "See more",
-  "common.close": "Close"
+  "common.close": "Close",
+  "common.bills":"Bills",
+  "bills.id": "Bill code",
+  "bills.date": "Date",
+  "bills.destiny": "Pay to",
+  "bills.status": "Status",
+  "bills.amount": "Amount"
 }

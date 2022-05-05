@@ -31,17 +31,12 @@ const BillCard: FC<BillCardProps> = ({bill}) => {
       </Pressable>
       <View style={styles.infoBill}>
         <Text accessibilityLabel={`${bill.date}`}>
-          <Text style={styles.textBold}>{`${t('common.datePaid')}:`} </Text>
+          <Text style={styles.textBold}>{`${t('bills.date')}:`} </Text>
           <Text>{bill.date}</Text>
         </Text>
 
-        <Text accessibilityLabel={`${bill.destiny}`}>
-          <Text style={styles.textBold}>{`${t('common.payTo')}:`} </Text>
-          <Text>{bill.destiny}</Text>
-        </Text>
-
         <Text accessibilityLabel={`${bill.status}`}>
-          <Text style={styles.textBold}>{`${t('common.statusPaid')}:`} </Text>
+          <Text style={styles.textBold}>{`${t('bills.status')}:`} </Text>
           <Text>{bill.status}</Text>
         </Text>
 

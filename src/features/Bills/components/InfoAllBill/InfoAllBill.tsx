@@ -4,29 +4,25 @@ import {InfoAllBillProps} from './InfoAllBill.types';
 import {useTranslation} from 'react-i18next';
 import {useTheme} from '@contexts/Theme';
 import {makeStyles} from './InfoAllBill.styles';
+import {BillType} from '@models/Bill';
 
 const InfoAllBill: FC<InfoAllBillProps> = ({bill}) => {
   const {t} = useTranslation();
   const {theme} = useTheme();
   const styles = makeStyles(theme);
-  return (
-    <View style={styles.infoBill}>
-      <Text accessibilityLabel={`${bill.date}`}>
-        <Text style={styles.textBold}>{`${t('common.datePaid')}:`} </Text>
-        <Text>{bill.date}</Text>
-      </Text>
 
-      <Text accessibilityLabel={`${bill.destiny}`}>
-        <Text style={styles.textBold}>{`${t('common.payTo')}:`} </Text>
-        <Text>{bill.destiny}</Text>
-      </Text>
+  const renderData = () => {
+    const labels = Object.keys(bill);
 
-      <Text accessibilityLabel={`${bill.status}`}>
-        <Text style={styles.textBold}>{`${t('common.statusPaid')}:`} </Text>
-        <Text>{bill.status}</Text>
+    return labels.map((label: string) => (
+      <Text accessibilityLabel={t(`bills.${label}`)}>
+        <Text style={styles.textBold}>{t(`bills.${label}`)}: </Text>
+        <Text>{bill[label as keyof BillType]}</Text>
       </Text>
-    </View>
-  );
+    ));
+  };
+
+  return <View style={styles.infoBill}>{renderData()}</View>;
 };
 
 export default InfoAllBill;
