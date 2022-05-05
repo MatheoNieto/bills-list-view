@@ -1,4 +1,4 @@
-import * as actualTheme from '@theme';
+import * as actualTheme from '../../../theme';
 
 export const globalDark = {
   ...actualTheme,

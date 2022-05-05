@@ -1,6 +1,6 @@
 import React, {FC, createContext, useState, useMemo} from 'react';
-import {useColorScheme} from '@hooks/useColorScheme';
-import {globalLight, globalDark} from '@contexts/Theme/constants/theme';
+import {useColorScheme} from '../../hooks/useColorScheme';
+import {globalLight, globalDark} from './constants/theme';
 import {ThemeProps, ThemeProviderType} from './types';
 
 export const ThemeContext = createContext<ThemeProviderType | undefined>(
