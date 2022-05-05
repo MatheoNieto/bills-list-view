@@ -26,5 +26,15 @@ export const makeStyles = ({spacing, color, fontWeight}: ThemeKeys) =>
     },
     textBold:{
       fontWeight: fontWeight.bold
+    },
+    seeMore: {
+      marginVertical: spacing[1],
+      padding: spacing[1],
+      borderWidth: 1,
+      borderColor: color.primary.grey
+    },
+    seeMoreLabel: {
+      fontWeight: fontWeight.bold,
+      textAlign: 'center'
     }
   });
