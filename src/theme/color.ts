@@ -7,4 +7,5 @@ export const color = {
     orangeLight: palette.OrangeLight,
   },
   white: palette.White,
+  shadowGrey: palette.ShadowGrey,
 }

@@ -1,4 +1,4 @@
-import {BillType, BillStatus} from '../../../models';
+import {BillType, BillStatus} from '@models/Bill';
 
 export const bills: BillType[] = [
   {
@@ -12,7 +12,7 @@ export const bills: BillType[] = [
   {
     id: 1,
     amount: 1000,
-    status: BillStatus.PAID,
+    status: BillStatus.SCHEDULED,
     date: '20-03-2022',
     destiny: 'test',
     image: 'https://cdn1.vectorstock.com/i/1000x1000/54/10/receipts-printed-bills-checks-receipt-print-bill-vector-23575410.jpg',
@@ -20,7 +20,7 @@ export const bills: BillType[] = [
   {
     id: 2,
     amount: 1000,
-    status: BillStatus.PAID,
+    status: BillStatus.PROCESSING,
     date: '20-03-2022',
     destiny: 'test',
     image: 'https://cdn1.vectorstock.com/i/1000x1000/54/10/receipts-printed-bills-checks-receipt-print-bill-vector-23575410.jpg',
@@ -28,7 +28,7 @@ export const bills: BillType[] = [
   {
     id: 3,
     amount: 1000,
-    status: BillStatus.PAID,
+    status: BillStatus.UNABLE_PAY,
     date: '20-03-2022',
     destiny: 'test',
     image: 'https://cdn1.vectorstock.com/i/1000x1000/54/10/receipts-printed-bills-checks-receipt-print-bill-vector-23575410.jpg',

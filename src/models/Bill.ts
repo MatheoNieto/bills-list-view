@@ -8,10 +8,10 @@ export type BillType = {
 };
 
 export enum BillStatus {
-  PROCESSING = 'processing',
-  SCHEDULED = 'scheduled',
-  UNABLE_PAY = 'unable to pay',
-  PAID = 'paid',
+  PROCESSING = 'Processing',
+  SCHEDULED = 'Scheduled',
+  UNABLE_PAY = 'Unable to pay',
+  PAID = 'Paid',
 }
 
 export type renderItemType = {item: BillType; index: number};

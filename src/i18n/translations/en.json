@@ -1,3 +1,8 @@
 {
-  "common.bills":"Bills"
+  "common.bills":"Bills",
+  "common.datePaid": "Date",
+  "common.payTo": "Pay to",
+  "common.statusPaid": "Status",
+  "common.seeMore": "See more",
+  "common.close": "Close"
 }

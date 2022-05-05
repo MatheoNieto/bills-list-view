@@ -1,5 +1,5 @@
-import {httpMethods} from '../../core/services/http';
-import {EndPoints} from '../../shared/endPoints';
+import {httpMethods} from '@core/services/http';
+import {EndPoints} from '@shared/endPoints';
 
 export const getBills = async () => {
   const response = await httpMethods.get({

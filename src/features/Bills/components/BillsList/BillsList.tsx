@@ -2,11 +2,11 @@ import React from 'react';
 import {View, FlatList} from 'react-native';
 
 import {BillCard} from '../BillCard';
-import {renderItemType} from '../../../../models';
-import {Spinner} from '../../../../components';
+import {renderItemType} from '@models/Bill';
+import {Spinner} from '@components/Spinner';
 import {bills} from '../../mock/listBills'
 
-import {useTheme} from '../../../../contexts/Theme';
+import {useTheme} from '@contexts/Theme';
 import {makeStyles} from './BillsList.styles';
 
 const BillsList = () => {

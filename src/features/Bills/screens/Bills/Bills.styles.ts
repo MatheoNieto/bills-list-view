@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {ThemeKeys} from '../../../../contexts/Theme';
+import {ThemeKeys} from '@contexts/Theme';
 
 export const makeStyles = ({spacing, sizes, color }: ThemeKeys) =>
   StyleSheet.create({

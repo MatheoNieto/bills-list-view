@@ -6,5 +6,7 @@ export const palette = {
   Grey: '#757575',
   Orange: '#FF5733',
   OrangeLight: '#FF603D',
-  White: '#fff'
+  White: '#fff',
+  ShadowGrey: 'rgba(0,0,0,0.5)',
+
 };

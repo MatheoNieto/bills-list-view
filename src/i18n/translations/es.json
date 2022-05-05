@@ -1,3 +1,8 @@
 {
-  "common.bills":"Facturas"
+  "common.bills":"Facturas",
+  "common.datePaid": "Fecha",
+  "common.payTo": "Pagar a",
+  "common.statusPaid": "Estado",
+  "common.seeMore": "Ver más",
+  "common.close": "Cerrar"
 }
