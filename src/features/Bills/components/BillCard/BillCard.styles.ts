@@ -10,31 +10,24 @@ export const makeStyles = ({spacing, color, fontWeight}: ThemeKeys) =>
       margin: spacing[2],
       flexDirection: 'column',
     },
-    contentImage:{
-      height: 150,
-      
-    },
-    imageBill: {
-      resizeMode: 'stretch',
-      height: 150,
-    },
+
     infoBill: {
       marginTop: spacing[1],
       borderTopWidth: 2,
       borderTopColor: color.primary.orangeLight,
-      paddingVertical: spacing[1]
+      paddingVertical: spacing[1],
     },
-    textBold:{
-      fontWeight: fontWeight.bold
+    textBold: {
+      fontWeight: fontWeight.bold,
     },
     seeMore: {
       marginVertical: spacing[1],
       padding: spacing[1],
       borderWidth: 1,
-      borderColor: color.primary.grey
+      borderColor: color.primary.grey,
     },
     seeMoreLabel: {
       fontWeight: fontWeight.bold,
-      textAlign: 'center'
-    }
+      textAlign: 'center',
+    },
   });
