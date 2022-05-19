@@ -1,11 +1,7 @@
-import {httpMethods} from '@core/services/http';
-import {EndPoints} from '@shared/endPoints';
+import {bills} from './mock/listBills';
 
-export const getBills = async () => {
-  const response = await httpMethods.get({
-    path: EndPoints.bills,
-  });
-  return response;
+export const getBills = async (billsLoad: number) => {
+  return Promise.resolve(bills.slice(0, billsLoad));
 };
 
 export const keysQuery = {

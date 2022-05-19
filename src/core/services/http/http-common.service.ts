@@ -6,7 +6,7 @@ export class HttpCommonService {
     this.alertService = new AlertService();
   }
 
-  handleError(error:any) {
+  handleError(error: any) {
     if (error.response.status === 0) {
       this.showAlertOffline();
       return;
@@ -20,7 +20,7 @@ export class HttpCommonService {
     this.showError(error.response);
   }
 
-  showError(appError:any, title?:string, message?:string) {
+  showError(appError: any, title?: string, message?: string) {
     const description = message ? message : appError.data.message;
     this.alertService.show(title, description);
   }

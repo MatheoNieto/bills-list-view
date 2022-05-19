@@ -1,5 +1,5 @@
-import {BillType} from '@models/Bill'
+import {BillType} from '@models/Bill';
 
 export type RequestGetBills = {
-  bills: BillType[] | undefined
-}
+  bills: BillType[] | undefined;
+};
