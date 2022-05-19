@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {Modal, View, Pressable, Text} from 'react-native';
+import { Modal, View, Pressable, Text, SafeAreaView } from 'react-native';
 import ImageViewer from 'react-native-image-zoom-viewer';
 import {ViewerImageProps} from './ViewerImage.types';
 import {useTheme} from '../../contexts/Theme';
@@ -13,11 +13,11 @@ const ViewerImage: FC<ViewerImageProps> = ({visible, image, onClose}) => {
 
   return (
     <Modal visible={visible} transparent={true}>
-      <View style={styles.container}>
+      <SafeAreaView style={[styles.container, {backgroundColor: 'white'}]}>
         <Pressable onPress={onClose}>
           <Text>{t('common.close')}</Text>
         </Pressable>
-      </View>
+      </SafeAreaView>
       <ImageViewer
         imageUrls={[
           {
